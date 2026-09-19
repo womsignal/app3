@@ -10,8 +10,8 @@ workflows:
           flutter pub get
       - name: Flutter build Universal APK
         script: |
-          # A --no-split-per-abi kényszeríti ki, hogy minden processzortípus benne legyen az APK-ban
-          flutter build apk --release --no-split-per-abi
+          # A sima build alapból egy univerzális FAT APK fájlt hoz létre
+          flutter build apk --release
     artifacts:
-      # Ez a pontos elérése az elkészült univerzális APK fájlnak
+      # Ez a pontos elérése a létrejövő egyetlen univerzális APK-nak
       - build/app/outputs/flutter-apk/app-release.apk
