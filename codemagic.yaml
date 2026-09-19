@@ -1,17 +1,30 @@
 workflows:
-  default-workflow:
-    name: Universal APK Workflow
+  multi-device-workflow:
+    name: Multi-Device Production Build
     max_build_duration: 60
+    instance_type: mac_mini_m1 # Gyors és stabil build környezet
     environment:
       flutter: stable
+      # Ha használsz egyedi Android Aláíró Kulcsot (Keystore), 
+      # a Codemagic felületén (Environment variables) add meg őket, 
+      # és az alábbi sorok automatikusan beemelik.
+      groups:
+        - keystore_credentials # Opcionális: a Codemagic UI-on létrehozott csoport neve
     scripts:
       - name: Flutter dependencies installation
         script: |
           flutter pub get
-      - name: Flutter build Universal APK
+      
+      - name: Flutter build split and universal APKs
         script: |
-          # A sima build alapból egy univerzális FAT APK fájlt hoz létre
+          # 1. Létrehozzuk a különálló, kis méretű APK-kat architektúránként (v7a, v8a, x86_64)
+          flutter build apk --release --split-per-abi
+          
+          # 2. Létrehozunk egy teljesen univerzális FAT APK-t is, ami minden eszközön működik
+          # Hozzáadunk egy egyedi nevet, hogy ne keveredjen össze a többivel
           flutter build apk --release
+          mv build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/app-universal-release.apk
+    
     artifacts:
-      # Ez a pontos elérése a létrejövő egyetlen univerzális APK-nak
-      - build/app/outputs/flutter-apk/app-release.apk
+      # Ez a parancs az összes legenerált APK-t elmenti (a split és az univerzális verziót is)
+      - build/app/outputs/flutter-apk/*.apk
