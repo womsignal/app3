@@ -1,0 +1,88 @@
+[
+    {
+        "id": "QR_1789068937012",
+        "nev": "teszt jakab",
+        "ceg": "mttb",
+        "vendeglato": "veres misi",
+        "belepes_ideje": "2026-09-10T21:35:37.020257",
+        "kilepes_ideje": "2026-09-10T21:38:15.751386"
+    },
+    {
+        "id": "QR_1789069247798",
+        "nev": "toth andras",
+        "ceg": "mttb",
+        "vendeglato": "vers misi",
+        "belepes_ideje": "2026-09-10T21:40:47.807669",
+        "kilepes_ideje": "2026-09-10T21:41:14.368665"
+    },
+    {
+        "id": "QR_1789070226320",
+        "nev": "toth eva",
+        "ceg": "mttb",
+        "rendszam": "abc-123",
+        "vendeglato": "veres  misi",
+        "belepes_ideje": "2026-09-10T21:57:06.330370",
+        "kilepes_ideje": "2026-09-12T20:39:13.369204"
+    },
+    {
+        "id": "QR_1789150478193",
+        "nev": "tóth éva",
+        "ceg": "mttb",
+        "rendszam": "",
+        "vendeglato": "veres misi",
+        "alairas_fajl": "alairasok/QR_1789150478193.png",
+        "belepes_ideje": "2026-09-11T20:14:38.214983",
+        "kilepes_ideje": "2026-09-11T20:15:04.832882"
+    },
+    {
+        "id": "QR_1789154741882",
+        "nev": "kiss jános",
+        "ceg": "mttb2",
+        "rendszam": "",
+        "vendeglato": "veres misi",
+        "alairas_fajl": "alairasok/QR_1789154741882.png",
+        "belepes_ideje": "2026-09-11T21:25:41.908861",
+        "kilepes_ideje": "2026-09-11T21:26:08.599885"
+    },
+    {
+        "id": "QR_1789157958927",
+        "nev": "teszt csaba",
+        "ceg": "mttb2",
+        "rendszam": "",
+        "vendeglato": "veres misi",
+        "alairas_fajl": "alairasok/QR_1789157958927.png",
+        "belepes_ideje": "2026-09-11T22:19:18.962058",
+        "kilepes_ideje": "2026-09-11T22:19:56.234447"
+    },
+    {
+        "id": "QR_1789238178714",
+        "nev": "Tóth Éva",
+        "ceg": "mttb",
+        "rendszam": "",
+        "vendeglato": "Kovács Gábor (Ügyvezető / CEO)",
+        "alairas_fajl": "alairasok/QR_1789238178714.png",
+        "belepes_ideje": "2026-09-12T20:36:18.740575",
+        "kilepes_ideje": "2026-09-12T20:39:51.544114"
+    },
+    {
+        "id": "QR_1789238426120",
+        "nev": "Kovács József",
+        "ceg": "elektor",
+        "rendszam": "",
+        "vendeglato": "Kiss Attila (IT Csoportvezető)",
+        "alairas_fajl": "alairasok/QR_1789238426120.png",
+        "belepes_ideje": "2026-09-12T20:40:26.148821",
+        "kilepes_ideje": null
+    },
+    {
+        "id": "QR_1789666120211",
+        "nev": "Kovács István",
+        "ceg": "mttb",
+        "rendszam": "",
+        "vendeglato": "Kovács Gábor (Ügyvezető / CEO)",
+        "kartya_szama": "",
+        "alairas_fajl": "alairasok/QR_1789666120211.png",
+        "belepes_ideje": "2026-09-17T19:28:40.245580",
+        "kilepes_ideje": null
+    }
+]
