@@ -1,6 +1,6 @@
 workflows:
   default-workflow:
-    name: Default Workflow
+    name: Universal APK Workflow
     max_build_duration: 60
     environment:
       flutter: stable
@@ -8,8 +8,10 @@ workflows:
       - name: Flutter dependencies installation
         script: |
           flutter pub get
-      - name: Flutter build APK
+      - name: Flutter build Universal APK
         script: |
-          flutter build apk --release
+          # A --no-split-per-abi kényszeríti ki, hogy minden processzortípus benne legyen az APK-ban
+          flutter build apk --release --no-split-per-abi
     artifacts:
-      - build/app/outputs/flutter-apk/*-release.apk
+      # Ez a pontos elérése az elkészült univerzális APK fájlnak
+      - build/app/outputs/flutter-apk/app-release.apk
